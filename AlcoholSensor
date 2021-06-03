@@ -1,0 +1,40 @@
+import serial
+#import time
+#import signal
+#import threading
+
+
+#set a port number & baud rate
+PORT = '/dev/cu.usbmodem11201' #your port name
+Baud = 9600
+
+ARD = serial.Serial(PORT,Baud)
+
+def Decode(A):
+    A = A.decode()
+    A = str(A)
+    if A[0]=='A':
+        if(len(A)==11):
+            Ard1=int(A[1:5])
+            Ard2=int(A[5:9])
+            result= [Ard1,Ard2]
+            return result
+        else :
+            print("Error_lack of number _ %d" %len(A))
+            return False
+    else :
+        print ("Error_Wrong Signal")
+        return False
+    
+def Ardread(): #return list [Ard1, Ard2]
+    if ARD.readable():
+        LINE = ARD.readline()
+        code=Decode(LINE)
+        print(code)
+        return code
+    else:
+        print("읽기 실패 from _Ardread_")
+        
+while (True):
+    Ardread()
+    
