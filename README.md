@@ -33,7 +33,7 @@
 ## Main
 1. [data_collection.ipynb](https://github.com/Jeongyeon-K1m/Alcohol-car/blob/main/data_collection.ipynb)를 통해서 도로의 사진 데이터르 모은다.
 2. [train_model.ipynb](https://github.com/Jeongyeon-K1m/Alcohol-car/blob/main/train_model.ipynb)를 통해서 이전에 모은 사진 데이터들의 best_steering_model_xy.pth 파일을 생성한다.
-3. [live_demo.ipynb](https://github.com/Jeongyeon-K1m/Alcohol-car/blob/main/live_demo.ipynb)에 best_steering_model_xy.pth 파일을 이용해서 라인을 따라 자율주행한다. 그런데 이때 만약 알코올 농도 일정 값 이상일 경우 젯봇으 동작하지 않는다. 그 값을 이 코드에서는 160 이상으로 설정하였다. 160은 혈중 알코올 농도 계산식에 따라서 팀원들과 함께 측정항 평균치를 낸 값이다.
+3. [live_demo.ipynb](https://github.com/Jeongyeon-K1m/Alcohol-car/blob/main/live_demo.ipynb)에 best_steering_model_xy.pth 파일을 이용해서 라인을 따라 자율주행한다. 그런데 이때 만약 알코올 농도가 일정 값 이상일 경우 젯봇이 동작하지 않는다. 그 값을 이 코드에서는 160 이상으로 설정하였다. 160은 혈중 알코올 농도 계산식에 따라서 팀원들과 함께 측정하여 평균치를 낸 값이다.
 
 
 ## 결과동영상
